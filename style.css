@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #efe6d2;
+    color: #2d241b;
+}
+
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+
+    background: rgba(30, 25, 20, 0.9);
+
+    color: white;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 10%;
+
+    background:
+        linear-gradient(
+            rgba(20, 15, 10, 0.55),
+            rgba(20, 15, 10, 0.7)
+        ),
+        url("images/candi.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.subtitle {
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 100px);
+    line-height: 0.9;
+}
+
+.hero p {
+    margin: 30px 0;
+    font-size: 18px;
+}
+
+
+/* BUTTON */
+
+.button,
+button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #b88a45;
+
+    color: white;
+
+    border: none;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+}
+
+button:hover,
+.button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* SECTION */
+
+.section {
+    min-height: 80vh;
+
+    padding: 120px 10%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.text h2,
+.story h2,
+.quiz h2 {
+    font-size: 50px;
+    margin: 15px 0 25px;
+}
+
+.text p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.label {
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* IMAGE */
+
+.image-box img,
+.relief-box img {
+    width: 100%;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.2);
+}
+
+
+/* DARK SECTION */
+
+.dark {
+    background: #28231e;
+    color: #f5eee1;
+}
+
+
+/* STORY */
+
+.story {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.story-card {
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 50px;
+
+    background: #fffaf0;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.12);
+}
+
+.story-card h3 {
+    margin-bottom: 20px;
+}
+
+.story-card p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* QUIZ */
+
+.quiz {
+    padding: 120px 10%;
+    text-align: center;
+
+    background: #d8c39e;
+}
+
+#quiz-area {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 60px 10%;
+
+    text-align: center;
+
+    background: #191512;
+
+    color: white;
+}
+
+footer p {
+    margin-top: 15px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .menu {
+        display: none;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+    }
+
+    .text h2,
+    .story h2,
+    .quiz h2 {
+        font-size: 38px;
+    }
+
+}
+/* =========================================
+   RESPONSIVE UNTUK HP
+   ========================================= */
+
+@media screen and (max-width: 800px) {
+
+    /* Tampilan umum */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* NAVBAR */
+    nav {
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+
+    /* HERO / HALAMAN DEPAN */
+    .hero {
+        min-height: 90vh;
+        padding: 40px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 90%;
+    }
+
+    .hero button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+
+    /* SECTION */
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    section p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* GRID */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    /* CARD */
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* GAMBAR */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* CERITA */
+    .story {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* QUIZ */
+    .quiz-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .quiz-container button {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 30px 20px;
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+
+/* HP YANG LEBIH KECIL */
+@media screen and (max-width: 480px) {
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+}
